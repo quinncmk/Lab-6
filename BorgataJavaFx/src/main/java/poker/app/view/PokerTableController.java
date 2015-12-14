@@ -321,7 +321,7 @@ public class PokerTableController {
 		DealFaceDownCards(gme.getRule().getCOMMUNITYCARDSMAX(), 0);
 
 		// Add a deck to the game
-		gme.setGameDeck(new Deck(gr.getNUMBEROFJOKERS(), GameRuleCardsDAL.getCardsRules()));
+		gme.setGameDeck(new Deck(gr.getNUMBEROFJOKERS()));
 
 		// Call common code to set the game controls
 		SetGameControls(eGameState);

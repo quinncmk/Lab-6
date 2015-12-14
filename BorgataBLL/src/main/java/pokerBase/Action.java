@@ -27,7 +27,9 @@ public class Action {
 		{
 			this.bEvaluateHand = true;
 		}
-		this.setiCardDrawn(GameRuleCardsDomainModel.getPICKORDER());
+		
+		
+		this.setiCardDrawn(gme.getiCardsToDraw()[iDrawCount]);
 	}
 
 	public GamePlay getGme() {

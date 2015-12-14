@@ -12,6 +12,7 @@ import domain.DeckDomainModel;
 import domain.GamePlayDomainModel;
 import domain.GameRuleDomainModel;
 import domain.RuleDomainModel;
+import logic.GameRuleCardsBLL;
 
 public class GamePlay extends GamePlayDomainModel {
 
@@ -20,6 +21,8 @@ public class GamePlay extends GamePlayDomainModel {
 	private ArrayList<GamePlayPlayerHand> GameCommonHand = new ArrayList<GamePlayPlayerHand>();
 	private GameRuleDomainModel gr;
 	private Deck GameDeck = null;
+	private int[] iCardsToDraw;
+	
 	
 	public GamePlay(GameRuleDomainModel gr)
 	{
@@ -28,6 +31,14 @@ public class GamePlay extends GamePlayDomainModel {
 		this.setMaxNbrOfPlayers(gr.getMAXNUMBEROFPLAYERS());
 		this.setNbrOfJokers(gr.getNUMBEROFJOKERS());
 		this.setWildCards(GameRuleCardsDAL.getCardsRules());
+		
+		iCardsToDraw = GameRuleCardsBLL.getCardsRulesint(gr.getRULEID());
+		
+		
+		
+		
+		
+		
 		this.gr = gr;
 	}
 
@@ -92,6 +103,10 @@ public class GamePlay extends GamePlayDomainModel {
 			}
 		}
 		return GPPHReturn;
+	}
+
+	public int[] getiCardsToDraw() {
+		return iCardsToDraw;
 	}
 	
 	
