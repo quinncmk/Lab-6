@@ -30,15 +30,9 @@ public class GamePlay extends GamePlayDomainModel {
 		this.setNbrOfCards(gr.getPLAYERNUMBEROFCARDS());
 		this.setMaxNbrOfPlayers(gr.getMAXNUMBEROFPLAYERS());
 		this.setNbrOfJokers(gr.getNUMBEROFJOKERS());
-		this.setWildCards(GameRuleCardsDAL.getCardsRules());
 		
 		iCardsToDraw = GameRuleCardsBLL.getCardsRulesint(gr.getRULEID());
-		
-		
-		
-		
-		
-		
+			
 		this.gr = gr;
 	}
 

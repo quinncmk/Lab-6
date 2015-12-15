@@ -80,12 +80,4 @@ public class GamePlayDomainModel {
 		NbrOfJokers = nbrOfJokers;
 	}
 
-	public ArrayList<GameRuleCardsDomainModel> getWildCards() {
-		return WildCards;
-	}
-
-	public void setWildCards(ArrayList<GameRuleCardsDomainModel> wildCards) {
-		WildCards = wildCards;
-	}
-
 }

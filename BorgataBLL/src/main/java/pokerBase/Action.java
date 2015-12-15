@@ -27,8 +27,7 @@ public class Action {
 		{
 			this.bEvaluateHand = true;
 		}
-		
-		
+			
 		this.setiCardDrawn(gme.getiCardsToDraw()[iDrawCount]);
 	}
 
